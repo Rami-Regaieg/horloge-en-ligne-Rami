@@ -79,25 +79,25 @@ function WorldClock() {
   const [hours, minutes, seconds] = timeString.split(":");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center p-4">
       <div className="w-full max-w-2xl">
         <div className="bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 border border-white/20">
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
-            <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-purple-300" />
+            <Clock className="w-6 h-6 sm:w-8 sm:h-8 text-red-300" />
             <h1 className="text-2xl sm:text-3xl font-bold text-white">
               Horloge Mondiale
             </h1>
           </div>
 
           <div className="mb-6 sm:mb-8">
-            <label className="flex items-center gap-2 text-purple-200 mb-2 sm:mb-3 text-sm font-medium">
+            <label className="flex items-center gap-2 text-red-200 mb-2 sm:mb-3 text-sm font-medium">
               <Globe className="w-4 h-4" />
               Fuseau horaire
             </label>
             <select
               value={timezone}
               onChange={(e) => setTimezone(e.target.value)}
-              className="w-full bg-white/20 text-white border border-white/30 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-400 backdrop-blur-sm"
+              className="w-full bg-white/20 text-white border border-white/30 rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-400 backdrop-blur-sm"
             >
               {timezones.map((tz) => (
                 <option
@@ -111,16 +111,16 @@ function WorldClock() {
             </select>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-4 sm:p-8 mb-6 border border-white/20">
+          <div className="bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-2xl p-4 sm:p-8 mb-6 border border-white/20">
             <div className="flex items-center justify-center gap-1 sm:gap-2 text-5xl sm:text-7xl md:text-8xl font-bold text-white mb-4 font-mono">
               <span className="bg-white/10 px-2 sm:px-4 py-1 sm:py-2 rounded-lg sm:rounded-xl">
                 {hours}
               </span>
-              <span className="text-purple-300 animate-pulse">:</span>
+              <span className="text-red-300 animate-pulse">:</span>
               <span className="bg-white/10 px-2 sm:px-4 py-1 sm:py-2 rounded-lg sm:rounded-xl">
                 {minutes}
               </span>
-              <span className="text-purple-300 animate-pulse">:</span>
+              <span className="text-red-300 animate-pulse">:</span>
               <span className="bg-white/10 px-2 sm:px-4 py-1 sm:py-2 rounded-lg sm:rounded-xl">
                 {seconds}
               </span>
@@ -128,20 +128,20 @@ function WorldClock() {
           </div>
 
           <div className="text-center">
-            <p className="text-purple-200 text-base sm:text-xl capitalize px-2">
+            <p className="text-red-200 text-base sm:text-xl capitalize px-2">
               {formatDate()}
             </p>
           </div>
         </div>
 
         <footer className="mt-6 text-center">
-          <p className="text-purple-300 text-sm">
+          <p className="text-red-300 text-sm">
             Créé par{" "}
             <a
               href="https://www.linkedin.com/in/rami-regaieg-555475166/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-semibold hover:text-purple-200 transition-colors underline"
+              className="text-white font-semibold hover:text-red-200 transition-colors underline"
             >
               Rami REGAIEG
             </a>{" "}
@@ -150,7 +150,7 @@ function WorldClock() {
               href="https://claude.ai/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-semibold hover:text-purple-200 transition-colors underline"
+              className="text-white font-semibold hover:text-red-200 transition-colors underline"
             >
               Claude AI
             </a>
